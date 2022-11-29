@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorabazar Solution</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+    <div class="main">
+        
+        <!-- Navigation bar -->
+        <div class="nav" id="navBar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a class="active" href="about.html">About Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="header">
+            <h1>About Us</h1>
+        </div>
+
+        <h2 class="secondhead">Our Team</h2>
+
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <!-- <img src="" alt=""> -->
+                    <div class="img img1"></div>
+                    <div class="container">
+                        <h2>Ejaj Ahammed</h2>
+                        <p class="title">Proprietor</p>
+                        <p>A person with endless enthusiasm to learn.</p>
+                        <p>ejajahammed9@gmail.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <!-- <img src="" alt=""> -->
+                    <div class="img img2"></div>
+                    <div class="container">
+                        <h2>Person B</h2>
+                        <p class="title">Researcher</p>
+                        <p>Some description.</p>
+                        <p>email@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <!-- <img src="" alt=""> -->
+                    <div class="img img3"></div>
+                    <div class="container">
+                        <h2>Person C</h2>
+                        <p class="title">Marketer</p>
+                        <p>Some description.</p>
+                        <p>email@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="footer">
+            <p>Made with love by Ejaj Ahammed<br>
+            <a href="mailto:ejajahammed9@gmail.com">ejajahammed9@gmail.com</a></p>
+        </div>
+
+
+
+    <script>
+        // Navigation Bar funtion
+        function responsiveNavBar() {
+            var x = document.getElementById("navBar");
+            if (x.className==="nav") {
+                x.className += " responsive ";
+            } else {
+                x.className = "nav"
+            }
+        }
+        // Navigation Bar function ends
+        
+    </script>
+
+  </body>
+</html>

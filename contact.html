@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Gorabazar Solution</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+    <div class="main">
+        
+        <!-- Navigation bar -->
+        <div class="nav" id="navBar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a class="active" href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <!-- Contents -->
+        <div class="container">
+            <div class="title">
+                <h2>Contact Us</h2>
+                <p>Meet us for some deals, or leave us a message:</p>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                  <img src="images/map.png">
+                </div>
+                <div class="column">
+                  <form action="">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Type your first name.." required>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Type your last name.." required>
+
+                    <label for="talkabout">You want to talk about:</label>
+                    <select id="talkabout" name="talkabout">
+                      <option value="order">Order</option>
+                      <option value="delivery">Delivery</option>
+                      <option value="repair">Repair</option>
+                    </select>
+
+                    <div class="chk">
+                        <label for="">You are interest in:</label><br>
+                        <div>
+                            <input type="checkbox" id="product1" name="product1" value="instruments">
+                            <label for="product1">Instruments</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="product2" name="product2" value="equipments">
+                            <label for="product2">Equipments</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="product3" name="product3" value="chemicals">
+                            <label for="product3">Chemicals</label>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <label for="mob">Enter your mobile number:</label>
+                    <input type="tel" id="mob" name="mobile" pattern="[0-9]{10}" placeholder="0000-000-000" required>
+                    <label for="email">Enter your Email ID:</label>
+                    <input type="email" id="email" name="email" placeholder="email@company.com">
+
+                    <label for="">You want to be contacted via:</label><br>
+                    <input type="radio" id="mobile" name="contact_via" value="Mobile">
+                    <label for="mobile">Mobile</label>
+                    <input type="radio" id="emailid" name="contact_via" value="Email">
+                    <label for="emailid">Email</label>
+                    <input type="radio" id="anyofthem" name="contact_via" value="Any of them">
+                    <label for="anyofthem">Any of them</label>
+                    <br><br>
+                    <label for="message">Message for enquiry:</label>
+                    <textarea id="message" name="message" placeholder="Write about your requirements.."></textarea>
+                    <input type="submit" value="Submit" >
+                    <input type="reset">
+                  </form>
+                </div>
+              </div>
+
+        </div>
+        
+    </div>
+
+    <div class="footer">
+      <p>Made with love by Ejaj Ahammed<br>
+      <a href="mailto:ejajahammed9@gmail.com">ejajahammed9@gmail.com</a></p>
+    </div>
+
+
+    <script>
+        // Navigation Bar funtion
+        function responsiveNavBar() {
+            var x = document.getElementById("navBar");
+            if (x.className==="nav") {
+                x.className += " responsive ";
+            } else {
+                x.className = "nav"
+            }
+        }
+        // Navigation Bar function ends
+        
+    </script>
+
+  </body>
+</html>

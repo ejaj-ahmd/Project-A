@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorabazar Solution</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+    <div class="main">
+        
+        <!-- Navigation bar -->
+        <div class="nav" id="navBar">
+            <a class="active" href="#home">Home</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <!-- Slide show -->
+        <div class="slideshow" >
+            <div class="title" id="mainTitle">
+                <h1>Gorabazar Solution</h1>
+            </div>
+            <div class="slide fade">
+                <img src="images/img_mountains_wide.jpg" alt="">
+            </div>
+            <div class="slide fade">
+                <img src="images/img_nature_wide.jpg" alt="">
+            </div>
+            <div class="slide fade">
+                <img src="images/img_snow_wide.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <h2>Laboratory Goods Supplier</h2>
+
+        <div class="left">
+            <h3>Glassware</h3>
+            <p>Erlenmeyer Flasks, Graduated Cylinders, Test Tubes, Petri Dishes, Tube Rack, Beakers, Glass Slides & Coverslips, etc.</p>
+        </div>
+        <div class="middle">
+            <h3>Equipments</h3>
+            <p>Microscopes, Dissecting Tool Kits, Dissecting Pan, Hot Plate, Electronic Balance, Spatulas, Thermometer, Bunsen Burner, Litmus & Filter Papers, etc.</p>
+        </div>
+        <div class="right">
+            <h3>Chemicals</h3>
+            <p>All type of chemicals avialable with prior order.</p>
+        </div>
+
+        <div class="footer">
+            <p>Made with love by Ejaj Ahammed<br>
+            <a href="mailto:ejajahammed9@gmail.com">ejajahammed9@gmail.com</a></p>
+        </div>
+
+
+
+    <script>
+        // Navigation Bar funtion
+        function responsiveNavBar() {
+            var x = document.getElementById("navBar");
+            if (x.className==="nav") {
+                x.className += " responsive ";
+            } else {
+                x.className = "nav"
+            }
+        }
+        // Navigation Bar function ends
+        
+
+        // Functions for slideshow 
+        let slideIndex = 1;
+        showSlides(slideIndex);     // When browser loads the page
+
+        // Works according to the dots clicked
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+        // Slideshow funtion ends
+
+
+
+    </script>
+
+  </body>
+</html>

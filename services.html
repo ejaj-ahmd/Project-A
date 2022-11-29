@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorabazar Solution</title>
+    <link rel="stylesheet" href="./services.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+    <div class="main">
+        
+        <!-- Navigation bar -->
+        <div class="nav" id="navBar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a class="active" href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <!-- Contents -->
+        <div class="header">
+            <h1>Our Services</h1>
+        </div>
+
+        <div class="row">
+            <div id="c1" class="column" onclick="openTab('b1')">
+                Order
+            </div>
+            <div id="c2" class="column" onclick="openTab('b2')">
+                Delivery
+            </div>
+            <div id="c3" class="column" onclick="openTab('b3')">
+                Repair
+            </div>
+        </div>
+
+        <div id="b1" class="containerTab">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h2>Order</h2>
+            <p>We take order for most of the items immediately. Few items need more time to take as order. You can order via Call or WhatsApp.</p>
+        </div>
+
+        <div id="b2" class="containerTab">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h2>Delivery</h2>
+            <p>For most of the items we server 7days Express Delivery. Few items require more time to be delivered.</p>
+        </div>
+
+        <div id="b3" class="containerTab">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h2>Repair</h2>
+            <p>For some items we offer 1-time free repair service for 6 months from date of purchase.</p>
+        </div>
+
+
+        <div class="footer">
+            <p>Made with love by Ejaj Ahammed<br>
+            <a href="mailto:ejajahammed9@gmail.com">ejajahammed9@gmail.com</a></p>
+        </div>
+
+
+
+    <script>
+        // Navigation Bar funtion
+        function responsiveNavBar() {
+            var x = document.getElementById("navBar");
+            if (x.className==="nav") {
+                x.className += " responsive ";
+            } else {
+                x.className = "nav"
+            }
+        }
+        // Navigation Bar function ends
+        
+        // Open Tab function
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+        //  Open Tab function ends
+
+    </script>
+
+  </body>
+</html>
